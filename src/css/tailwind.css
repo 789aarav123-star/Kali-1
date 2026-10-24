@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-800 text-slate-200 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-cream;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-gold-500 text-navy-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-500 ring-offset-2 ring-offset-navy-900;
+  }
+
+  /* Native date/time pickers stay readable on the dark theme. */
+  input[type='date'],
+  input[type='time'] {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  /* ---------- Skip link ---------- */
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-[70] rounded-lg bg-gold-gradient px-4 py-2 text-sm font-semibold text-navy-900 shadow-gold;
+  }
+
+  /* ---------- Typography helpers ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-gold-400;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply block h-px w-8 bg-gold-500/70;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold-gradient text-navy-900 shadow-gold hover:brightness-110 active:translate-y-px;
+  }
+
+  .btn-outline {
+    @apply btn border border-gold-500/60 text-gold-300 hover:border-gold-500 hover:bg-gold-500/10 hover:text-gold-300;
+  }
+
+  .btn-ghost {
+    @apply btn text-slate-300 hover:text-gold-300;
+  }
+
+  .spinner {
+    @apply h-4 w-4 shrink-0 animate-spin-slow rounded-full border-2 border-navy-900/30 border-t-navy-900;
+  }
+
+  /* ---------- Navigation ---------- */
+  .nav-link {
+    @apply relative text-sm font-medium text-slate-300 transition hover:text-gold-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-gold-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    @apply w-full;
+  }
+
+  .mobile-link {
+    @apply block rounded-lg px-4 py-3 text-base font-medium text-slate-300 transition hover:bg-white/5 hover:text-gold-300;
+  }
+
+  .footer-heading {
+    @apply mb-4 text-xs font-bold uppercase tracking-[0.24em] text-gold-400;
+  }
+
+  .footer-link {
+    @apply text-slate-400 transition hover:text-gold-300;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-bg {
+    background-image: url('/images/counter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* ---------- Menu ---------- */
+  .tab-button {
+    @apply rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-300 transition duration-200 hover:bg-white/5 hover:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500;
+  }
+
+  .tab-button.is-active {
+    @apply bg-gold-gradient text-navy-900 shadow-gold;
+  }
+
+  .menu-card {
+    @apply flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-900/60 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/50 hover:shadow-gold;
+  }
+
+  .menu-card.is-hidden {
+    @apply hidden;
+  }
+
+  /* ---------- Forms ---------- */
+  .form-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300;
+  }
+
+  .form-input {
+    @apply block w-full rounded-xl border border-white/15 bg-navy-900/80 px-4 py-3 text-sm text-cream placeholder-slate-500 transition focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/40;
+  }
+
+  .form-input[aria-invalid='true'] {
+    @apply border-red-400/70 focus:border-red-400 focus:ring-red-400/40;
+  }
+
+  .form-error {
+    @apply mt-2 hidden text-xs font-medium text-red-300;
+  }
+
+  .form-error:not(:empty) {
+    @apply block;
+  }
+
+  .checkbox-card {
+    @apply flex cursor-pointer items-start gap-3 rounded-xl border border-white/15 bg-navy-900/60 p-4 transition hover:border-gold-500/60;
+  }
+
+  .checkbox-input {
+    @apply mt-0.5 h-4 w-4 shrink-0 rounded border-white/30 bg-navy-900 text-gold-500 focus:ring-2 focus:ring-gold-500 focus:ring-offset-0 focus:ring-offset-navy-900;
+  }
+
+  /* ---------- Toasts ---------- */
+  .toast {
+    @apply pointer-events-auto flex w-full max-w-md items-start gap-3 rounded-2xl border px-4 py-3.5 text-sm shadow-card backdrop-blur;
+    animation: toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+    background-color: rgba(15, 26, 56, 0.95);
+    border-color: rgba(212, 175, 55, 0.45);
+    color: #e2e8f0;
+  }
+
+  .toast-success {
+    border-color: rgba(52, 211, 153, 0.5);
+    background-color: rgba(6, 78, 59, 0.72);
+  }
+
+  .toast-error {
+    border-color: rgba(248, 113, 113, 0.5);
+    background-color: rgba(127, 29, 29, 0.68);
+  }
+
+  .toast-title {
+    @apply block font-semibold text-cream;
+  }
+
+  .toast-message {
+    @apply mt-0.5 block text-xs leading-relaxed text-slate-200;
+  }
+
+  .toast-close {
+    @apply ml-auto shrink-0 rounded-md p-1 text-slate-300 transition hover:bg-white/10 hover:text-cream;
+  }
+
+  /* ---------- Scroll reveal (only when JS is available) ---------- */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

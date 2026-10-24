@@ -1,0 +1,25 @@
+{
+  "name": "kali-hotel-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kali Hotel & Restaurant — Janakpur Dham. Express + EJS + Tailwind marketing site with reservation and event inquiry API.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
+    "dev": "npm run build:css && node --watch server.js",
+    "start": "npm run build:css && node server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

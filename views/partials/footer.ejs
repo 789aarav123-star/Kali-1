@@ -1,0 +1,120 @@
+<footer class="border-t border-white/10 bg-navy-900">
+  <div class="mx-auto max-w-container px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Brand -->
+      <div>
+        <a href="<%= homeUrl %>#top" class="flex items-center gap-3" aria-label="<%= site.name %> — back to top">
+          <img
+            src="/images/logo_kali.jpg"
+            alt="<%= site.name %> logo"
+            width="56"
+            height="56"
+            class="h-14 w-14 rounded-full border border-gold-500/60 object-cover"
+          />
+          <span class="leading-tight">
+            <span class="block font-display text-xl font-bold text-cream">Kali Hotel</span>
+            <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-gold-400">&amp; Restaurant</span>
+          </span>
+        </a>
+        <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
+          A restaurant in Janakpur Dham offering an attractive ambience, high notch service and mouth
+          watering multi-cuisine food. Allow us to provide our service to you — hope to see you soon!
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <a
+            href="<%= site.facebook %>"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-slate-300 transition hover:border-gold-500 hover:bg-gold-500/10 hover:text-gold-400"
+            aria-label="Kali Hotel and Restaurant on Facebook"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.12v2.28H7.6V14h2.7v8h3.2Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="tel:<%= site.phoneE164 %>"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-slate-300 transition hover:border-gold-500 hover:bg-gold-500/10 hover:text-gold-400"
+            aria-label="Call Kali Hotel and Restaurant"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7a2 2 0 0 1 1.73 2.03Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a class="footer-link" href="<%= homeUrl %>#menu">Our Menu</a></li>
+          <li><a class="footer-link" href="<%= homeUrl %>#celebrations">Celebrations &amp; Parties</a></li>
+          <li><a class="footer-link" href="<%= homeUrl %>#reviews">Customer Reviews</a></li>
+          <li><a class="footer-link" href="<%= site.whatsappUrl %>" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a></li>
+          <li><a class="footer-link" href="<%= homeUrl %>#visit">Find Us</a></li>
+          <li><a class="footer-link" href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <!-- Visit -->
+      <div>
+        <h2 class="footer-heading">Visit Us</h2>
+        <address class="space-y-4 text-sm not-italic text-slate-400">
+          <p class="flex gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 2a6 6 0 0 0-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 0 0-6-6Zm0 8.25A2.25 2.25 0 1 1 10 5.75a2.25 2.25 0 0 1 0 4.5Z" />
+            </svg>
+            <span><%= site.address.full %></span>
+          </p>
+          <p class="flex gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7a2 2 0 0 1 1.73 2.03Z" />
+            </svg>
+            <a class="footer-link" href="tel:<%= site.phoneE164 %>"><%= site.phone %></a>
+          </p>
+          <% site.hours.forEach((hours) => { %>
+            <p class="flex gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 8V4h-2v7h5v-2h-3Z" />
+              </svg>
+              <span><%= hours.days %>: <%= hours.time %></span>
+            </p>
+          <% }) %>
+        </address>
+      </div>
+
+      <!-- Rating card -->
+      <div>
+        <h2 class="footer-heading">Google Reviews</h2>
+        <div class="rounded-2xl border border-gold-500/25 bg-navy-800/70 p-5">
+          <div class="flex items-center gap-1" aria-hidden="true">
+            <% for (let i = 0; i < 5; i += 1) { %>
+              <svg class="h-5 w-5 <%= i < 4 ? 'text-gold-500' : 'text-gold-500/40' %>" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 1.8l2.35 4.76 5.25.77-3.8 3.7.9 5.23L10 13.94l-4.7 2.32.9-5.23-3.8-3.7 5.25-.77L10 1.8Z" />
+              </svg>
+            <% } %>
+          </div>
+          <p class="mt-3 font-display text-3xl font-bold text-cream"><%= site.rating.value.toFixed(1) %></p>
+          <p class="text-sm text-slate-400">Based on <%= site.rating.count %> Google reviews</p>
+          <a
+            href="<%= site.mapsUrl %>"
+            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-400 hover:text-gold-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read them on Google
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row">
+      <p>&copy; <%= currentYear %> <%= site.name %>. All rights reserved.</p>
+      <p>Ring Road, Janakpur Dham &middot; Madhesh Province, Nepal</p>
+    </div>
+  </div>
+</footer>

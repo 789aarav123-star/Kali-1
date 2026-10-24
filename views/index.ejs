@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <%- include('partials/head', { pageTitle, metaDescription, ogImage, canonicalUrl, jsonLd }) %>
+  </head>
+  <body id="top" class="min-h-screen bg-navy-800 text-slate-200 antialiased">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <%- include('partials/navbar') %>
+
+    <main id="main-content">
+      <%- include('sections/hero') %>
+      <%- include('sections/menu') %>
+      <%- include('sections/celebrations') %>
+      <%- include('sections/reviews') %>
+      <%- include('sections/visit') %>
+    </main>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/toast') %>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

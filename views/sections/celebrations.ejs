@@ -1,0 +1,108 @@
+<section id="celebrations" class="relative overflow-hidden bg-navy-900 py-20 sm:py-24" aria-labelledby="celebrations-heading">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.12),transparent_55%)]" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-stretch">
+      <!-- Story + image -->
+      <div>
+        <p class="eyebrow">Celebrations</p>
+        <h2 id="celebrations-heading" class="mt-3 font-display text-3xl font-bold text-cream sm:text-4xl">
+          Birthdays, anniversaries and cabin bookings
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-slate-400">
+          Kali Hotel is the place our guests come to for birthdays and anniversary parties. We arrange the
+          decorations, set up the seating and keep the cabins free for early booking so your evening runs
+          exactly the way you planned it.
+        </p>
+
+        <div class="mt-8 overflow-hidden rounded-2xl border border-white/10 shadow-card">
+          <img
+            src="/images/bday_example.jpg"
+            alt="Birthday party setup with balloon decorations at Kali Hotel and Restaurant, Janakpur Dham"
+            width="960"
+            height="640"
+            loading="lazy"
+            decoding="async"
+            class="h-64 w-full object-cover sm:h-80"
+          />
+        </div>
+
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+          <% site.celebrations.forEach((item) => { %>
+            <li class="rounded-2xl border border-white/10 bg-navy-800/70 p-5">
+              <h3 class="font-display text-lg font-semibold text-cream"><%= item.title %></h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400"><%= item.text %></p>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <div id="reserve" class="scroll-mt-28 flex flex-col rounded-2xl border border-gold-500/25 bg-navy-800/80 p-6 shadow-card sm:p-8">
+        <p class="eyebrow">Get in touch</p>
+        <h3 class="mt-3 font-display text-2xl font-bold text-cream">Plan your visit with us</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-400">
+          Message us to reserve a table, ask about a private cabin or plan a celebration. Prefer a conversation?
+          Call us directly.
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-white/10 bg-navy-900/70 p-5 sm:p-6">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold-400">A little detail goes a long way</p>
+          <h4 class="mt-2 font-display text-xl font-semibold text-cream">Help us make it yours</h4>
+          <p class="mt-2 text-sm text-slate-400">When you message, let us know:</p>
+
+          <ul class="mt-5 space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold-400" aria-hidden="true"></span>
+              <span class="text-sm leading-relaxed text-slate-300"><strong class="font-semibold text-cream">When</strong> you plan to visit</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold-400" aria-hidden="true"></span>
+              <span class="text-sm leading-relaxed text-slate-300"><strong class="font-semibold text-cream">How many</strong> guests are coming</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold-400" aria-hidden="true"></span>
+              <span class="text-sm leading-relaxed text-slate-300"><strong class="font-semibold text-cream">What you have in mind</strong> — a table, cabin or celebration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-1 items-center justify-center py-6 lg:py-8">
+          <img
+            src="/images/logo_kali.jpg"
+            alt="Kali Hotel &amp; Restaurant"
+            width="180"
+            height="180"
+            loading="lazy"
+            decoding="async"
+            class="h-32 w-32 rounded-full border border-gold-500/40 object-cover shadow-gold sm:h-36 sm:w-36 lg:h-40 lg:w-40"
+          />
+        </div>
+
+        <div class="mt-auto grid gap-3 pt-8 sm:grid-cols-2">
+          <a
+            href="<%= site.whatsappUrl %>"
+            class="btn-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Message Kali Hotel and Restaurant on WhatsApp"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 2a8 8 0 0 0-6.84 12.15L2 18l3.98-1.05A8 8 0 1 0 10 2Zm0 14.5a6.48 6.48 0 0 1-3.3-.9l-.24-.14-2.36.62.63-2.3-.16-.25A6.5 6.5 0 1 1 10 16.5Zm3.57-4.87c-.2-.1-1.16-.58-1.34-.65-.18-.07-.31-.1-.44.1-.13.19-.5.65-.61.78-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.54-1-1.21-1.12-1.41-.12-.2-.01-.31.09-.41.09-.08.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.37c-.13 0-.34.05-.52.25-.18.2-.68.67-.68 1.63s.7 1.9.8 2.03c.1.13 1.38 2.1 3.35 2.95.47.2.83.33 1.11.42.47.15.9.13 1.24.08.38-.06 1.16-.47 1.33-.93.16-.46.16-.85.11-.93-.04-.08-.18-.13-.38-.23Z" />
+            </svg>
+            Message us on WhatsApp
+          </a>
+          <a href="tel:<%= site.phoneE164 %>" class="btn-outline" aria-label="Call Kali Hotel and Restaurant on <%= site.phone %>">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7a2 2 0 0 1 1.73 2.03Z" />
+            </svg>
+            Call <%= site.phone %>
+          </a>
+        </div>
+
+        <p class="mt-5 text-xs leading-relaxed text-slate-400">
+          WhatsApp opens a ready-to-send message. We recommend contacting us early for cabin and event bookings.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

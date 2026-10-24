@@ -1,0 +1,93 @@
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy-900/85 backdrop-blur-md transition-shadow duration-300"
+>
+  <nav class="mx-auto flex max-w-container items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8" aria-label="Primary">
+    <!-- Brand -->
+    <a href="<%= homeUrl %>#top" class="group flex shrink-0 items-center gap-3" aria-label="<%= site.name %> — home">
+      <img
+        src="/images/logo_kali.jpg"
+        alt="<%= site.name %> logo"
+        width="48"
+        height="48"
+        class="h-12 w-12 rounded-full border border-gold-500/60 object-cover shadow-gold transition-transform duration-300 group-hover:scale-105"
+      />
+      <span class="hidden leading-tight sm:block">
+        <span class="block font-display text-lg font-bold tracking-wide text-cream">Kali Hotel</span>
+        <span class="block text-[0.68rem] font-medium uppercase tracking-[0.28em] text-gold-400">&amp; Restaurant</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden items-center gap-7 lg:flex">
+      <li>
+        <a class="nav-link" href="<%= homeUrl %>#menu">Menu</a>
+      </li>
+      <li>
+        <a class="nav-link" href="<%= homeUrl %>#celebrations">Celebrations</a>
+      </li>
+      <li>
+        <a class="nav-link" href="<%= homeUrl %>#reviews">Reviews</a>
+      </li>
+      <li>
+        <a class="nav-link" href="<%= homeUrl %>#visit">Visit Us</a>
+      </li>
+      <li><a class="nav-link" href="/privacy">Privacy</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a
+        href="tel:<%= site.phoneE164 %>"
+        class="hidden items-center gap-2 rounded-full border border-gold-500/50 px-4 py-2.5 text-sm font-semibold text-gold-300 transition hover:border-gold-500 hover:bg-gold-500/10 sm:inline-flex"
+        aria-label="Call Kali Hotel and Restaurant on <%= site.phone %>"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7a2 2 0 0 1 1.73 2.03Z" />
+        </svg>
+        <span><%= site.phone %></span>
+      </a>
+
+      <a href="<%= site.whatsappUrl %>" class="btn-gold !px-5 !py-2.5 text-sm" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+
+      <!-- Mobile menu toggle -->
+      <button
+        type="button"
+        id="nav-toggle"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-cream transition hover:border-gold-500/60 hover:text-gold-400 lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open navigation menu"
+      >
+        <svg id="nav-icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="nav-icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy-900/97 lg:hidden">
+    <ul class="mx-auto flex max-w-container flex-col gap-1 px-4 py-4 sm:px-6">
+      <li><a class="mobile-link" href="<%= homeUrl %>#menu">Menu</a></li>
+      <li><a class="mobile-link" href="<%= homeUrl %>#celebrations">Celebrations</a></li>
+      <li><a class="mobile-link" href="<%= homeUrl %>#reviews">Reviews</a></li>
+      <li><a class="mobile-link" href="<%= homeUrl %>#visit">Visit Us</a></li>
+      <li><a class="mobile-link" href="/privacy">Privacy</a></li>
+      <li class="pt-2">
+        <a
+          href="tel:<%= site.phoneE164 %>"
+          class="flex items-center gap-2 rounded-lg border border-gold-500/50 px-4 py-3 text-sm font-semibold text-gold-300"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7a2 2 0 0 1 1.73 2.03Z" />
+          </svg>
+          Call <%= site.phone %>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
